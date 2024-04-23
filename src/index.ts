@@ -1,7 +1,12 @@
-import express, { Request, Response } from 'express'
+import express, { Request, Response, Router } from 'express'
+
+import apiRouter from './routes';
 
 const app = express()
 const port = process.env.PORT || 8080
+
+// Create the router for API routes
+app.use('/api', apiRouter);
 
 app.get('/', (_req: Request, res: Response) => {
   return res.send('Express Typescript on Vercel')
