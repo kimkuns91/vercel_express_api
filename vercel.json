@@ -1,9 +1,12 @@
 {
     "version": 2,
     "builds": [{
-        "src": "dist/index.js",
+        "src": "package.json",
         "use": "@vercel/node",
-        "config": { "includeFiles": ["dist/**", "prisma/**"] }
+        "config": {
+            "buildCommand": "yarn build",
+            "includeFiles": ["prisma/schema.prisma"]
+        }
     }],
     "routes": [{
         "src": "/(.*)",
