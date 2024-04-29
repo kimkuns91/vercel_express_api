@@ -6,7 +6,6 @@ import { config } from './config/env.config';
 const app = express()
 const port = config.PORT
 
-// Create the router for API routes
 app.use('/api', apiRouter);
 
 app.get('/', (_req: Request, res: Response) => {

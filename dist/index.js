@@ -8,7 +8,6 @@ const routes_1 = __importDefault(require("./routes"));
 const env_config_1 = require("./config/env.config");
 const app = (0, express_1.default)();
 const port = env_config_1.config.PORT;
-// Create the router for API routes
 app.use('/api', routes_1.default);
 app.get('/', (_req, res) => {
     return res.send('Express Typescript on Vercel');
